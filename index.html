@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Parcelamento | AJPLAY</title>
+  <meta name="description" content="Simule o parcelamento da sua compra em até 18x.">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <main class="container">
+    <header class="topo">
+      <span class="marca">AJPLAY</span>
+      <h1>Simulador de parcelamento</h1>
+      <p class="sub">Digite o valor no Pix e veja as opções no débito e no crédito, em até 18x.</p>
+    </header>
+
+    <section class="card">
+      <label for="valor">Valor no Pix</label>
+      <div class="campo-valor">
+        <span>R$</span>
+        <input id="valor" type="text" inputmode="decimal" placeholder="0,00" autocomplete="off">
+      </div>
+      <p id="erro" class="erro" role="alert" hidden></p>
+
+      <label for="parcelas">Forma de pagamento</label>
+      <select id="parcelas"></select>
+
+      <div id="resultado" class="resultado" hidden>
+        <p class="rotulo">Você paga</p>
+        <p class="destaque" id="res-destaque"></p>
+        <p class="detalhe">Total: <strong id="res-total"></strong></p>
+        <a id="btn-whats" class="btn" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="card" id="tabela-box" hidden>
+      <h2>Todas as opções</h2>
+      <table>
+        <thead>
+          <tr><th>Forma</th><th>Parcela</th><th>Total</th></tr>
+        </thead>
+        <tbody id="tabela"></tbody>
+      </table>
+    </section>
+
+    <p class="aviso">Simulação sem compromisso. Os valores podem mudar e são confirmados no atendimento.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
